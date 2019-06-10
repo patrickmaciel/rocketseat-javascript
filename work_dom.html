@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logic</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" name='nome' id='nome' class='nome'>
+        <button class='botao'>Adicionar</button>
+    </div>
+
+    <script>
+        var inputElement = document.getElementById('nome');
+        console.log(inputElement);
+
+        var inputElements = document.getElementsByTagName('input')[0];
+        console.log(inputElements);
+
+        var inputElementClass = document.getElementsByClassName('nome')[0];
+        console.log(inputElementClass);
+
+        var inputQuery = document.querySelector('div#app input[name=nome]');
+        console.log(inputQuery);
+
+        var btnElement = document.querySelector('button.botao');
+
+        btnElement.onclick = function() {
+            var text = inputElement.value;
+            alert(text);
+        }
+    </script>
+</body>
+</html>
