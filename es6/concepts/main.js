@@ -113,3 +113,15 @@ console.log(teste2());
 
 const teste3 = () => ({nome: 'Patrick'});
 console.log(teste3());
+
+console.log('======================================');
+console.log('DEFAULT VALUES');
+console.log('======================================');
+
+function soma2(a = 3, b = 6) {
+  return a + b;
+}
+console.log(soma2(1));
+
+const soma3 = (a = 1, b = 2) => a + b;
+console.log(soma3(1));
