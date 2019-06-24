@@ -108,3 +108,26 @@ function teste(x) {
 }
 
 teste(10);
+var arr = [1, 2, 3, 4, 5];
+var newArray = arr.map(function (item, index) {
+  return item * 2 + index;
+});
+console.log('map');
+console.log(arr);
+console.log(newArray);
+var sum = arr.reduce(function (total, next) {
+  console.log(total, next);
+  return total + next;
+});
+console.log('sum');
+console.log(sum);
+var filter = arr.filter(function (item) {
+  return item % 2 === 0;
+});
+console.log('filter');
+console.log(filter);
+var find = arr.find(function (item) {
+  return item === 9;
+});
+console.log('find');
+console.log(find);
