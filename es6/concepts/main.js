@@ -54,6 +54,10 @@ function teste(x) {
 
 teste(10);
 
+console.log('======================================');
+console.log('ARRAY OPERATIONS');
+console.log('======================================');
+
 const arr = [1,2,3,4,5];
 const newArray = arr.map(function(item, index) {
   return (item * 2) + index;
@@ -80,3 +84,32 @@ const find = arr.find(function(item) {
 });
 console.log('find');
 console.log(find);
+
+// * arrow functions
+console.log('======================================');
+console.log('ARROW FUNCTIONS');
+console.log('======================================');
+
+const newArray2 = arr.map(function(item) {
+  return item * 2;
+});
+console.log(newArray2);
+
+const newArray3 = arr.map((item) => {
+  return item * 2;
+});
+console.log(newArray3);
+
+const newArray4 = arr.map(item => {
+  return item * 2;
+});
+console.log(newArray4);
+
+const newArray5 = arr.map(item => item * 2);
+console.log(newArray5);
+
+const teste2 = () => 'teste2';
+console.log(teste2());
+
+const teste3 = () => ({nome: 'Patrick'});
+console.log(teste3());

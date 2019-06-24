@@ -108,6 +108,9 @@ function teste(x) {
 }
 
 teste(10);
+console.log('======================================');
+console.log('ARRAY OPERATIONS');
+console.log('======================================');
 var arr = [1, 2, 3, 4, 5];
 var newArray = arr.map(function (item, index) {
   return item * 2 + index;
@@ -130,4 +133,38 @@ var find = arr.find(function (item) {
   return item === 9;
 });
 console.log('find');
-console.log(find);
+console.log(find); // * arrow functions
+
+console.log('======================================');
+console.log('ARROW FUNCTIONS');
+console.log('======================================');
+var newArray2 = arr.map(function (item) {
+  return item * 2;
+});
+console.log(newArray2);
+var newArray3 = arr.map(function (item) {
+  return item * 2;
+});
+console.log(newArray3);
+var newArray4 = arr.map(function (item) {
+  return item * 2;
+});
+console.log(newArray4);
+var newArray5 = arr.map(function (item) {
+  return item * 2;
+});
+console.log(newArray5);
+
+var teste2 = function teste2() {
+  return 'teste2';
+};
+
+console.log(teste2());
+
+var teste3 = function teste3() {
+  return {
+    nome: 'Patrick'
+  };
+};
+
+console.log(teste3());
