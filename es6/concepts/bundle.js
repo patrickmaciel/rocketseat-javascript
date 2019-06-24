@@ -89,3 +89,22 @@ function () {
 }();
 
 console.log(Matematica.soma(1, 2));
+var a = 1; // a = 3; // error
+
+console.log('constante a = ' + a);
+var usuario = {
+  nome: 'Patrick'
+};
+usuario.nome = 'Cleiton';
+console.log(usuario);
+
+function teste(x) {
+  var y = 2;
+
+  if (x > 5) {
+    var _y = 4;
+    console.log(x, _y);
+  }
+}
+
+teste(10);
