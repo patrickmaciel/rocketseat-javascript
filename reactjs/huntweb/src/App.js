@@ -1,10 +1,11 @@
 import React from 'react';
-import api from './services/api';
+// import api from './services/api';
+import Routes from './routes';
 
 import './styles.css';
 
 import Header from './components/Header'
-import Main from './pages/main';
+// import Main from './pages/main';
 
 // function App() {
 //   return (
@@ -17,7 +18,7 @@ import Main from './pages/main';
 const App = () => (
   <div className='App'>
     <Header />
-    <Main />
+    <Routes />
   </div>
 );
 
