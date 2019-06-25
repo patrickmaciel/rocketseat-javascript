@@ -1,50 +1,28 @@
-console.log('webpack-dev-server on');
+class App {
+  constructor() {
+    this.repositories = [];
+    this.formEl = document.getElementById('repo-form');
+    this.registerHandlers();
+  }
 
-import axios from 'axios';
+  registerHandlers() {
+    // this.formEl.onsubmit = function(event) {
+    //   addRepository(event);
+    // }
+    this.formEl.onsubmit = event => this.addRepository(event);
+  }
 
-class Api {
-  static async getUserInfo(username) {
-    try {
-      const response = await axios.get(`https://api.github.com/users/${username}`);
-      console.log(response.data);
-    } catch (err) {
-      console.warn('Erro na API');
-    }
+  addRepository(event) {
+    event.preventDefault();
+    this.repositories.push({
+      name: 'Patrick Maciel',
+      description: 'Engenheiro de Software na Recrutei',
+      avatar_url: 'https://avatars3.githubusercontent.com/u/671670?s=460&v=4',
+      html_url: 'https://github.com/patrickmaciel'
+    });
+    console.log(this.repositories);
   }
 }
 
-Api.getUserInfo('patrickmaciel');
-
-// async await content
-// const minhaPromise = () => new Promise((resolve, reject) => {
-//   setTimeout(() => { resolve('OK') }, 2000);
-// });
-
-// minhaPromise()
-//   .then(response => {
-//     console.log(response);
-//   })
-//   .catch(err => {
-//     console.log(err);
-//   });
-
-// async function executaPromise() {
-//   console.log(await minhaPromise());
-//   console.log(await minhaPromise());
-//   console.log(await minhaPromise());
-//   console.log(await minhaPromise());
-//   console.log(await minhaPromise());
-//   console.log(await minhaPromise());
-// };
-
-// executaPromise();
-
-// const executaPromise = async () => {
-//   console.log(await minhaPromise());
-//   console.log(await minhaPromise());
-//   console.log(await minhaPromise());
-//   console.log(await minhaPromise());
-//   console.log(await minhaPromise());
-//   console.log(await minhaPromise());
-// }
-// executaPromise();
+// let MeuApp = new App();
+new App();
